@@ -25,10 +25,12 @@ img {
 .galley {
     display: flex;
     box-sizing: border-box;
+    position: relative;
+    justify-content: space-between;
+
 }
 
 .art-work {
-    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
@@ -40,9 +42,8 @@ img {
     box-shadow: 0 0.5em 1em -0.125em rgba(160, 161, 157, .1), 0 0 0 1px rgba(160, 161, 157, .02);
     color: rgb(232, 236, 229);
     max-width: 100%;
-    box-sizing: border-box;
     display: flex;
-    margin: 20px 30px 30px;
+    margin: 20px 30px auto;
 }
 
 .art-work-img {
@@ -76,6 +77,10 @@ body {
     background-color: rgb(79, 84, 88);
 }
 
+.select_button {
+    margin: 10px auto;
+}
+
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
@@ -89,46 +94,11 @@ body {
     box-shadow: none !important;
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .btn.btn-primary:hover {
     border: 1px solid rgb(179, 197, 207);
     background: transparent;
     color: rgb(179, 197, 207);
-}
-
-
-.upload_file {
-    heigth: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-}
-
-label {
-    background: rgb(160, 161, 157);
-    border: 1px solid rgb(106, 123, 139);
-    color: #fff;
-    padding: 5px 5px;
-    border-radius: 4px;
-    box-shadow: none !important;
-    font-size: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-label:hover {
-    border: 1px solid rgb(106, 123, 139);
-    background: transparent;
-    color: rgb(106, 123, 139);
-}
-
-label.active {
-    background-color: rgb(106, 123, 139);
-    color: #ffffff;
-}
-
-label span {
-    font-weight: normal;
 }
