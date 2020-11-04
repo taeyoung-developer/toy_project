@@ -1,0 +1,134 @@
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+* {
+    margin: 0;
+    box-sizeing: border-box;
+    transition: all 0.35s linear;
+}
+
+.title_group {
+    background: linear-gradient(rgb(179, 197, 207), rgb(106, 123, 139), rgb(79, 84, 88));
+    color: rgb(179, 197, 207);
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 24px 12px;
+    align-items: stretch;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.galley {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.art-work {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    background-color: rgb(160, 161, 157);
+    background-clip: border-box;
+    border: 1px solid;
+    border-radius: .25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgba(160, 161, 157, .1), 0 0 0 1px rgba(160, 161, 157, .02);
+    color: rgb(232, 236, 229);
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    margin: 20px 30px 30px;
+}
+
+.art-work-img {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    margin: auto;
+    height: 300px;
+    max-width: 300px;
+}
+
+.art-work-body {
+
+    -webkit-box-flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.art-work-title {
+    margin-bottom: .75rem;
+}
+
+.art-work-artist {
+    font-size: 10px;
+    text-align: right;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(79, 84, 88);
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    background: rgb(160, 161, 157);
+    border: 1px solid rgb(179, 197, 207);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: none !important;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn.btn-primary:hover {
+    border: 1px solid rgb(179, 197, 207);
+    background: transparent;
+    color: rgb(179, 197, 207);
+}
+
+
+.upload_file {
+    heigth: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+label {
+    background: rgb(160, 161, 157);
+    border: 1px solid rgb(106, 123, 139);
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 4px;
+    box-shadow: none !important;
+    font-size: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+label:hover {
+    border: 1px solid rgb(106, 123, 139);
+    background: transparent;
+    color: rgb(106, 123, 139);
+}
+
+label.active {
+    background-color: rgb(106, 123, 139);
+    color: #ffffff;
+}
+
+label span {
+    font-weight: normal;
+}
