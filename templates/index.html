@@ -7,8 +7,41 @@
         <link rel="stylesheet" href="static/style.css?44" type="text/css">
         <link rel="stylesheet" media="screen and (max-width: 768px)" href="min.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
 
+        <script>
+            $(document).ready(function () {
 
+            })
+            $('#url').onkeypress(function (e) {
+                if (e.keyCode == 13) {
+                    let url = $('#url').val();
+                    let show = document.querySelector('input');
+                    show.placeholder = "saved url :" + url;
+                    let showurl = '<span>' + show.placeholder + '</span>'
+                    let outurl = document.getElementById("selector");
+                    outurl.innerHTML = showurl;
+                    outurl.classList.add("active");
+                }
+                let inputurl = document.getElementById("url");
+                inputurl.addEventListener("change",);
+                $.ajax({
+                    type: 'POST',
+                    url: "/transfer",
+                    data: {
+                        content: content,
+                        style: 'D:/privacy/transfer_style/static/img/wave.jpg'
+                    },
+                    dataType: 'text',
+                    success: function (data) {
+                        console.log(data.content)
+                        console.log(data.style)
+                    }
+                })
+            })
+        </script>
     </head>
     <body>
         <section class="foreword">
@@ -17,69 +50,82 @@
                 <h4 class="subtitle">여러 화풍으로 이미지 변화</h4>
             </div>
         </section>
-        <div class="galley">
-            <div class="art-work">
-                <img class="art-work-img" src="static/la_muse.jpg" alt="la_muse">
-                <div class="art-work-body">
-                    <h5 class="art-work-title">라뮤즈</h5>
-                    <h5 class="art-work-artist">by 파블로 피카소</h5>
-                    <div class="select_button">
-                        <button onclick="OpenCard()" type="button" class="btn btn-primary">select</button>
-                    </div>
-                    {#            <div class="FileUpload">#}
-                    {#                <input type="file" id="Uploadimg" name="Uploadfile" accept="image/png, image/jpeg"#}
-                    {#                       formenctype="multipart/form-data">#}
-                    {#                <span onclick="ImgUpload()" class="btn btn-white" id="Confirmation">Upload</span>#}
-                    {#            </div>#}
-                    <div class="upload_file">
-                        <input type="file" name="" id="file" hidden>
-                        <label for="file" id="selector">select file</label>
-                    </div>
-                    <script src="../static/js/file.js"></script>
-                </div>
-            </div>
-            <div class="art-work">
-                <img class="art-work-img" src="static/rain_princess.jpg" alt="rain_princess">
-                <div class="art-work-body">
-                    <h5 class="art-work-title">비 공주</h5>
-                    <h5 class="art-work-artist">by 레오니드 아프레모프</h5>
-                    <div class="select_button">
-                        <button onclick="OpenCard()" type="button" class="btn btn-primary">선택</button>
+        <section class="galley">
+            <div class="galley_list">
+                <div class="art-work">
+                    <img class="art-work-img" src="static/img/la_muse.jpg" alt="la_muse">
+                    <div class="art-work-body">
+                        <h5 class="art-work-title">라뮤즈</h5>
+                        <h5 class="art-work-artist">by 파블로 피카소</h5>
+                        <div class="select_button">
+                            <button onclick="ShowUrlButton()" type="button" class="btn btn-primary" id="select">select
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="art-work">
-                <img class="art-work-img" src="static/the_scream.jpg" alt="the_scream">
-                <div class="art-work-body">
-                    <h5 class="art-work-title">절규</h5>
-                    <h5 class="art-work-artist">by 에드바르 뭉크</h5>
-                    <div class="select_button">
-                        <button onclick="OpenCard()" type="button" class="btn btn-primary">선택</button>
+                <div class="art-work">
+                    <img class="art-work-img" src="static/img/rain_princess.jpg" alt="rain_princess">
+                    <div class="art-work-body">
+                        <h5 class="art-work-title">비 공주</h5>
+                        <h5 class="art-work-artist">by 레오니드 아프레모프</h5>
+                        <div class="select_button">
+                            <button onclick="ShowUrlButton()" type="button" class="btn btn-primary">select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-work">
+                    <img class="art-work-img" src="static/img/the_scream.jpg" alt="the_scream">
+                    <div class="art-work-body">
+                        <h5 class="art-work-title">절규</h5>
+                        <h5 class="art-work-artist">by 에드바르 뭉크</h5>
+                        <div class="select_button">
+                            <button onclick="ShowUrlButton()" type="button" class="btn btn-primary" id="select">select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-work">
+                    <img class="art-work-img" src="static/img/the_shipwreck_of_the_minotaur.jpg"
+                         alt="the_shipwreck_of_the_minotaur">
+                    <div class="art-work-body">
+                        <h5 class="art-work-title">미노타우로스 호의 난파</h5>
+                        <h5 class="art-work-artist">by 윌리엄 터너</h5>
+                        <div class="select_button">
+                            <button onclick="ShowUrlButton()" type="button" class="btn btn-primary" id="select">select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-work">
+                    <img class="art-work-img" src="static/img/udnie.jpg" alt="udnie">
+                    <div class="art-work-body">
+                        <h5 class="art-work-title">Udnie (젊은 미국 소녀, 댄스)</h5>
+                        <h5 class="art-work-artist">by 프란시스 피카비아</h5>
+                        <div class="select_button">
+                            <button onclick="ShowUrlButton()" type="button" class="btn btn-primary" id="select">select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-work">
+                    <img class="art-work-img" src="static/img/wave.jpg" alt="udnie">
+                    <div class="art-work-body">
+                        <h5 class="art-work-title">가나가와 해변의 높은 파도 아래</h5>
+                        <h5 class="art-work-artist">by 가쓰시카 호쿠사이</h5>
+                        <div class="select_button">
+                            <button onclick="ShowUrlButton()" type="button" class="btn btn-primary" id="select">select
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="art-work">
-                <img class="art-work-img" src="static/the_shipwreck_of_the_minotaur.jpg"
-                     alt="the_shipwreck_of_the_minotaur">
-                <div class="art-work-body">
-                    <h5 class="art-work-title">미노타우로스 호의 난파</h5>
-                    <h5 class="art-work-artist">by 윌리엄 터너</h5>
-                    <div class="select_button">
-                        <button onclick="OpenCard()" type="button" class="btn btn-primary">선택</button>
-                    </div>
-                </div>
+        </section>
+        <section class="upload_button" id="open">
+            <div class="upload_url">
+                <input type="text" name="url" placeholder="paste url here" id="url">
+                <label for="url" id="selector"></label>
             </div>
-            <div class="art-work">
-                <img class="art-work-img" src="static/udnie.jpg" alt="udnie">
-                <div class="art-work-body">
-                    <h5 class="art-work-title">Udnie (젊은 미국 소녀, 댄스)</h5>
-                    <h5 class="art-work-artist">by 프란시스 피카비아</h5>
-                    <div class="select_button">
-                        <button onclick="OpenCard()" type="button" class="btn btn-primary">선택</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </body>
-    <script type="text/javascript" src="./static/js/script.js"></script>
 </html>
