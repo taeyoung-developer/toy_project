@@ -5,7 +5,7 @@ img {
 
 * {
     margin: 0;
-    box-sizeing: border-box;
+    box-sizing: border-box;
     transition: all 0.35s linear;
 }
 
@@ -22,7 +22,7 @@ img {
     justify-content: space-between;
 }
 
-.galley {
+.galley_list {
     display: flex;
     box-sizing: border-box;
     position: relative;
@@ -39,7 +39,7 @@ img {
     background-clip: border-box;
     border: 1px solid;
     border-radius: .25rem;
-    box-shadow: 0 0.5em 1em -0.125em rgba(160, 161, 157, .1), 0 0 0 1px rgba(160, 161, 157, .02);
+    box-shadow: 0 0.5em 1em -0.125em rgba(160, 161, 157, .1), 0 0 0 1px rgba(160, 161, 157, .2);
     color: rgb(232, 236, 229);
     max-width: 100%;
     display: flex;
@@ -55,7 +55,6 @@ img {
 }
 
 .art-work-body {
-
     -webkit-box-flex: 1;
     padding: 10px;
     text-align: center;
@@ -81,11 +80,7 @@ body {
     margin: 10px auto;
 }
 
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-
-.btn.btn-primary {
+.btn.btn-primary, .download_button {
     background: rgb(160, 161, 157);
     border: 1px solid rgb(179, 197, 207);
     color: #fff;
@@ -97,8 +92,71 @@ body {
     letter-spacing: 1px;
 }
 
-.btn.btn-primary:hover {
+.btn.btn-primary:hover, .download_button:hover {
     border: 1px solid rgb(179, 197, 207);
     background: transparent;
     color: rgb(179, 197, 207);
+}
+
+.upload_url {
+    margin: 100px auto;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#url, label {
+    padding: 16px 48px;
+    border: 3px solid rgb(106, 123, 139);
+    border-radius: 48px;
+    background: rgb(79, 84, 88);
+}
+
+input::placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-weight: normal;
+    color: rgb(106, 123, 139)
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#url:hover, label:hover {
+    transform: scale(1.04);
+}
+
+.show_img {
+    margin: 100px auto;
+    height: 100vh;
+    display: none;
+    position: relative;
+    justify-content: center;
+
+}
+
+.photo_frames {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    margin: 20px 30px auto;
+    border: 5px solid rgb(106, 123, 139);
+    border-radius: 48px;
+    background: rgb(79, 84, 88);
+}
+
+#origin_img, #transfer_img {
+    margin: 30px 75px;
+    border: 5px solid rgb(106, 123, 139);
+    border-radius: 48px;
+    width: 700px;
+    height: 700px;
+
 }
