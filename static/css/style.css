@@ -1,12 +1,11 @@
-img {
-    vertical-align: middle;
-    border-style: none;
+body {
+    margin: 0;
+    transition: all 0.35s linear;
+    background-color: rgb(79, 84, 88);
 }
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-    transition: all 0.35s linear;
+img {
+    border-style: hidden;
 }
 
 .title_group {
@@ -69,21 +68,14 @@ img {
     text-align: right;
 }
 
-body {
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(79, 84, 88);
-}
-
 .select_button {
     margin: 10px auto;
 }
 
 .btn.btn-primary, .download_button {
-    background: rgb(160, 161, 157);
+    background: transparent;
     border: 1px solid rgb(179, 197, 207);
-    color: #fff;
+    color: rgb(179, 197, 207);
     padding: 10px 20px;
     border-radius: 4px;
     box-shadow: none !important;
@@ -93,9 +85,9 @@ body {
 }
 
 .btn.btn-primary:hover, .download_button:hover {
-    border: 1px solid rgb(179, 197, 207);
+    border: 1px solid rgb(106, 123, 139);
     background: transparent;
-    color: rgb(179, 197, 207);
+    color: rgb(106, 123, 139);
 }
 
 .upload_url {
@@ -146,10 +138,6 @@ input:focus::-webkit-input-placeholder {
     min-width: 0;
     max-width: 100%;
     display: flex;
-    margin: 20px 30px auto;
-    border: 5px solid rgb(106, 123, 139);
-    border-radius: 48px;
-    background: rgb(79, 84, 88);
 }
 
 #origin_img, #transfer_img {
